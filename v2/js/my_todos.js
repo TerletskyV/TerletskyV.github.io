@@ -27,10 +27,10 @@ var todoApp = {
                 }
                 myStorage.setItem(todo);
                 if (ev.target.nodeName === 'LI') {
-                    $(ev.target).toggleClass('grey checked grey lighten-1');
+                    $(ev.target).toggleClass('checked grey lighten-1');
                     $sp.toggleClass('hide');
                 } else {
-                    $liClosest.toggleClass('grey checked grey lighten-1');
+                    $liClosest.toggleClass('checked grey lighten-1');
                     $sp.toggleClass('hide');
                 }
             }
@@ -59,6 +59,7 @@ var todoApp = {
             $('#todoInput').attr('placeholder', 'What to do?');
             myStorage.setItem(todo);
             todoApp.render();
+            $('#todoInput').val('');
         }
         return false;
     },
@@ -84,7 +85,15 @@ var todoApp = {
         for (var i = 0; i < todos.length; i++) {
             var todo = todos[i];
 
-            $todoList.append('<li class="collection-item card-panel white-text grey todo-item ' + (todo.checked ? 'grey checked grey lighten-1 ' : '') + '" id="' + todo.id + '"><div class="row"><div class="col s11"><div>' + todo.text + (todo.checked ? '<span class="check"><i class=" material-icons">check</i></span>' : '<span class="check hide"><i class=" material-icons">check</i></span>') + '</div></div><div class="col s1"><span class="red-text right"><i class="material-icons remove">close</i></span></div></div></li>');
+            $todoList.append('<li class="collection-item card-panel todo-item row ' + (todo.checked ? 'grey checked grey lighten-1 ' : '') + '" id="' + todo.id + '">' +
+                '<div class="col s11">' +
+                '<div>' + todo.text + (todo.checked ? '<span class="check"><i class=" material-icons">check</i></span>' : '<span class="check hide"><i class=" material-icons">check</i></span>') +
+                '</div>' +
+                '</div>' +
+                '<div class="col s1">' +
+                '<span class="red-text right"><i class="material-icons remove">close</i></span>' +
+                '</div>' +
+                '</li>');
         }
     }
 }
