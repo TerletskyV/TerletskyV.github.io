@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <title>ToDo List</title>
+</head>
+
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a class="page-title">
+                        ToDo List
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <form class="col s12" id="todoForm">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="todoInput" name="todo" type="text" class="validate" placeholder="What to do?">
+                    </div>
+                    <div class="input-field col s6">
+                        <button type="submit" class="btn waves-effect waves-light" id="add"> Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="todos">
+            <ul class="collection" id="todoList"></ul>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/my_storage.js"></script>
+    <script src="js/my_todos.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.todo-item:hover {
+    cursor: pointer;
+}
+
+.todo-item.checked div {
+    text-decoration: line-through;
+}
+
+span.check>.material-icons {
+    font-size: 18px;
+}
