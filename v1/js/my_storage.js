@@ -1,4 +1,3 @@
-// CRUD | C = create; R = read; U = update; D = delete
 var myStorage = {
 
     setItem: function(item) {
@@ -26,7 +25,6 @@ var myStorage = {
     },
 
     getItem: function(id) {
-        debugger;
         var items = myStorage.getItems(); // [{text: "asdas", checked: true, id: 1}, ...]
         var filtereditems = items.filter(function(it, index) {
             return it.id == id;
